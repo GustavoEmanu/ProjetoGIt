@@ -2,12 +2,15 @@ Olá esse projeto ensina você usar o Git
 Isso é uma alteração
 
 import time 
+suspeito = [str.upper(input('Para quem você se dirige primeiro? '))]
 
 def escolher ():
-    suspeito = [str.upper(input('Para quem você se dirige primeiro? '))]
     while suspeito != "ALICE" or suspeito != "LUCAS" or suspeito != "PIETRO" or suspeito != "CARMEN":
         print('Resposta inválida')
+        suspeito = [str.upper(input('Para quem você se dirige primeiro? '))]
+
         escolher()
+    
     if suspeito == ['ALICE']:
         print('Você interroga Alice.') 
         time.sleep(3)
